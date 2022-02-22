@@ -1,23 +1,26 @@
-{{ range $ }}
+{{ range $i, $e := .Values }}
+{{ if ne $i "global" }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}-deployment
+  name: deployment
   labels:
-    app: {{ .Chart.Name }}
+    app: {{ $i }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: {{ $i }}
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
+        app: app
     spec:
       containers:
-      - name: {{ .Chart.Name }}
-        image: {{ .Chart.Name }}:{{ .Chart.AppVersion }}
+      - name: name
+        image: {{ $i }}:{{ $e.appVersion }}
         ports:
         - containerPort: 80
+
+{{ end }}
 {{ end }}
