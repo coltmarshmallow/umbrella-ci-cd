@@ -1,0 +1,12 @@
+dependencies:
+- name: microserviceA
+  repository: file://subcharts/microserviceA
+  version: 0.1.0
+- name: microserviceB
+  repository: file://subcharts/microserviceB
+  version: 0.1.0
+- name: microserviceC
+  repository: file://subcharts/microserviceC
+  version: 0.1.0
+digest: sha256:7ddc3e6c2807a73bf59f700b9eedb9387cb7f5710972e5365563fe7cb9a9fefc
+generated: "2022-02-22T01:01:15.969326374Z"
