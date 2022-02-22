@@ -14,8 +14,8 @@ https://docs.docker.com/desktop/windows/wsl/
         -helm
         https://helm.sh/docs/intro/install/#from-apt-debianubuntu
         -terraform
+        https://www.terraform.io/cli/install/apt
         
-
 -docker desktop (note license maybe needed for larger organisations)
 https://www.docker.com/products/docker-desktop
 
