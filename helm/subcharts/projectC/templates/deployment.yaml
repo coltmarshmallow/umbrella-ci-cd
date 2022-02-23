@@ -6,21 +6,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ $i }}
+  name: {{ lower $i }}
   labels:
-    app: {{ $i }}
+    app: {{ lower $i }}
 spec:
   replicas: {{ $e.replicas | default 1 }}
   selector:
     matchLabels:
-      app: {{ $i }}
+      app: {{ lower $i }}
   template:
     metadata:
       labels:
-        app: {{ $i }}
+        app: {{ lower $i }}
     spec:
       containers:
-      - name: {{ $i }}
+      - name: {{ lower $i }}
         image: {{ $e.global.registry }}/{{ $i }}:{{ $e.appVersion }}
         ports:
         - containerPort: {{ $e.port }}
