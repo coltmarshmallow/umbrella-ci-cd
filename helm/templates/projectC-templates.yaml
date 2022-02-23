@@ -1,0 +1,9 @@
+
+{{ if .Values.condition.projectC.enabled }}
+{{ template "projectC-deployment" .Values.projectC }}
+{{ template "projectC-ingress" .Values.projectC }}
+{{ template "projectC-service" .Values.projectC }}
+{{ end }}
+
+
+

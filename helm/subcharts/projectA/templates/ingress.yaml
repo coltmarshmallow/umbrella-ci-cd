@@ -1,0 +1,27 @@
+{{ define "projectA-ingress" }}
+
+{{- range $i, $e := . }}
+{{ if ne $i "global" }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ $i }}-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /{{ $i }}
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ $i }}
+            port:
+              number: {{ $e.port }}
+
+{{ end }}
+{{- end }}
+
+{{ end }}

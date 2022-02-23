@@ -1,3 +1,8 @@
-projectA.enabled: true
-projectB.enabled: true
-projectC.enabled: true
+condition:
+  projectA:
+    enabled: true
+  projectB:
+    enabled: true
+  projectC: 
+    enabled: true
+

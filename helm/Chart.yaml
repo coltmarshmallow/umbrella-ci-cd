@@ -27,12 +27,12 @@ dependencies:
 - name: projectA
   version: "0.1.0"
   repository: "file://subcharts/projectA"
-  condition: projectA.enabled
+  condition: condition.projectA.enabled
 - name: projectB
   version: "0.1.0"
   repository: "file://subcharts/projectB"
-  condition: projectB.enabled
+  condition: condition.projectB.enabled
 - name: projectC
   version: "0.1.0"
   repository: "file://subcharts/projectC"
-  condition: projectC.enabled
+  condition: condition.projectC.enabled

@@ -8,5 +8,5 @@ dependencies:
 - name: projectC
   repository: file://subcharts/projectC
   version: 0.1.0
-digest: sha256:1b548a9b9e551bb4447cd35cca426f3dd4a103a593e81f5622b905b025cdceb5
-generated: "2022-02-22T01:13:15.985996869Z"
+digest: sha256:e86a43dd8777655748c4f2ef993dbf32e0afa6861a9308b573966d6ebcfe223e
+generated: "2022-02-23T05:26:08.4625403Z"

@@ -1,0 +1,2 @@
+global:
+  registry: myregistry.azurecr.io

@@ -1,4 +1,4 @@
-{{ define "projectA-deployment" }}
+{{ define "projectC-deployment" }}
 
 {{- range $i, $e := . }}
 {{ if ne $i "global" }}

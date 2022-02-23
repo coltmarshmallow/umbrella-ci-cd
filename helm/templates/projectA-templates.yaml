@@ -1,0 +1,7 @@
+{{ if .Values.condition.projectA.enabled }}
+{{ template "projectA-deployment" .Values.projectA }}
+{{ template "projectA-ingress" .Values.projectA }}
+{{ template "projectA-service" .Values.projectA }}
+{{ end }}
+
+
